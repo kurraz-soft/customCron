@@ -95,10 +95,10 @@ foreach($dirs as $oneDir)
                 {
             	    if($ext == 'php')
             	    {
-                        $content .=  $freqDirAsssoc[$file] . " " . $oneDir['user'] . " cd " . $oneDir['path'].'/'.$file.'/' . " && php " . $script." > " . $oneDir['path'].'/'.$file.'/'.$script . ".log\n";
+                        $content .=  $freqDirAsssoc[$file] . " " . $oneDir['user'] . " cd " . $oneDir['path'].'/'.$file.'/' . " && php " . $script." > " . $oneDir['path'].'/'.$file.'/'.$script . ".log 2>&1\n";
                     }else
                     {
-                	$content .=  $freqDirAsssoc[$file] . " " . $oneDir['user'] . " cd " . $oneDir['path'].'/'.$file.'/' . " && ./" .$script." > " . $oneDir['path'].'/'.$file.'/'.$script . ".log\n";
+                	    $content .=  $freqDirAsssoc[$file] . " " . $oneDir['user'] . " cd " . $oneDir['path'].'/'.$file.'/' . " && ./" .$script." > " . $oneDir['path'].'/'.$file.'/'.$script . ".log 2>&1\n";
                     }
                     echo $script ."\n";
                 }
